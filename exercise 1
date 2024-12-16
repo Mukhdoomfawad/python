@@ -1,0 +1,15 @@
+# lang Python 
+Excercises : Write a program which repeatedly reads numbers unitl the user enter "done". 
+total = 0
+while True:
+  userInput = input('Enter Number:')
+  if userInput.lower() == 'done':
+      break
+  try:
+      number = float(userInput)
+      total += number
+  except ValueErro:
+      print('Bad Data')
+print('Sum of Numbers is: ' , total)
+print('Code Exits')
+    
