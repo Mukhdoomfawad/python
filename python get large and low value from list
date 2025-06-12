@@ -1,0 +1,26 @@
+'''
+Write another program that prompts for a list of numbers
+as above and at the end prints out both the maximum and minimum of
+the numbers instead of the average.
+'''
+largest = None
+lowest = None
+lst = []
+while True:
+     v = input('Enter Number or done for exit : > ')
+     try: 
+          if v.lower().strip() == 'done':
+               break
+          else:
+                lst.append(int(v))
+     except ValueError:
+          print('bad data')          
+for i in lst:
+     if largest == None or i > largest:
+          largest = i
+     if lowest == None or i < lowest:
+          lowest = i
+#lst.sort()          remove the comment to show full list genrated by code
+#print('Data : >', lst) remove the comment and will sort the list to verify the values
+print('lowest : <', lowest, ' Largest >', largest )
+print('Blast Off')     
