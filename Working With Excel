@@ -1,0 +1,21 @@
+
+import pandas as pd
+
+
+df = pd.read_excel("fab_1.xlsx", sheet_name='Sheet1') # df refer to Data Frame using by AI in showing example
+cloumnNames = df.columns.tolist() # List all column Names
+#shee = df[["ITEM" , "CL_QTY"]].to_string(index=False) # remove the row number
+sheetColumn = df[["ITEM" , "CL_QTY"]].sort_values(by="ITEM")#, ascending=False)
+sheetRow  = df.iloc[0:2]  # get row by index 
+#singleRow = df[df["CL_QTY"] > 25]
+
+# Create new column with split of last 10
+df["itemSplit"] = df["ITEM"].str[-10:]
+# Fillter the CL_QTY cloumn 
+#workinOnCloumns = df.loc[df["CL_QTY"] < 5, ["itemSplit","ITEM", "CL_QTY"]].sort_values(by=["itemSplit","ITEM","CL_QTY"])
+
+workinOnCloumns = df[["itemSplit","ITEM", "CL_QTY","RATE","VALUE"]].sort_values(by=["itemSplit","ITEM","CL_QTY"])
+outPut = workinOnCloumns[["ITEM","CL_QTY","RATE","VALUE"]]
+#outPut.to_excel("output.xlsx", index=False)
+print(outPut.iloc[0:10])
+    
