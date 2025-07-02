@@ -1,0 +1,16 @@
+# Enter number to generate the table
+
+def table(n):
+    for i in range(1,11):
+        print(n,"-",i,"-",i*n)
+while True:
+    t = input("Enter For table")
+    if not t.isdigit():
+        print("Enter Number")
+        continue
+    table(int(t))
+    res = input("Try New Tabel (Yes/No)")
+    if res.lower() != "yes":
+        break
+print("Table Closed")    
+
