@@ -1,0 +1,11 @@
+#Write a program that asks the user for a number N and prints all even numbers less than N.
+
+n = input("Enter Number_>")
+
+while int(n) >= 1:
+    n = int(n) - 1        
+    if int(n) % 2 == 0:
+        print(n)
+    else:
+        continue
+    
