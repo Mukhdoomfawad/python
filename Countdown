@@ -1,0 +1,11 @@
+## Exercise 6: Countdown
+# Write a program that takes a number as input and counts down to 0 using a while loop.
+n = int(input("Enter number to count down from: "))
+while n >= 0:
+    print(n)
+    n -= 1
+
+# Write a program that takes a number as input and counts down to 0 using a for loop.
+n = int(input("Enter number to count down from: "))
+for i in range(n,-1,-1):
+    print(i)
