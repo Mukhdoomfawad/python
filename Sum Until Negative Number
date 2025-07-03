@@ -1,0 +1,17 @@
+Sum Until Negative Number
+#Write a program that keeps accepting numbers from the user and adds them, but stops (and prints the sum) when the user enters a negative number.
+sum = 0
+while True:
+    try:   
+        n = float(input("Enter Number (negative to stop or Zero To Refresh)) "))
+        if n <= -1:
+            break
+        if n == 0:
+            sum = 0
+            print("counting rest to 0")
+            continue
+        sum = n + sum
+        print("Running ", sum)
+    except ValueError:
+        print("Enter Number")        
+print("Blastoff! Total = ", sum)
